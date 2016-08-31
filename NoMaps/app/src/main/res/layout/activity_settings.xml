@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+    <TextView
+        android:id="@+id/activity_settings_txtTitle"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:background="@drawable/button_border_drawable"
+        android:gravity="center_vertical"
+        android:paddingLeft="20dp"
+        android:text="@string/btn_settings_app"
+        android:textColor="@color/material_black"
+        android:textSize="20sp" />
+
+    <Button
+        android:id="@+id/activity_settings_btnViewLicensed"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:background="@drawable/button_border_drawable"
+        android:text="@string/open_source_licensed"
+        android:textColor="@color/material_black" />
+
+
+    <TextView
+        android:id="@+id/activity_settings_txtStateBlu"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:background="@drawable/button_border_drawable"
+        android:gravity="center"
+        android:text="@string/state_bluetooth"
+        android:textColor="@color/material_black" />
+
+
+    <TextView
+        android:id="@+id/activity_settings_txtStateNFC"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:background="@drawable/button_border_drawable"
+        android:gravity="center"
+        android:text="@string/state_nfc"
+        android:textColor="@color/material_black" />
+
+
+</LinearLayout>
