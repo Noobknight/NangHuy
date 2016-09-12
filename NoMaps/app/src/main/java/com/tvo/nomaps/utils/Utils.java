@@ -20,14 +20,38 @@ import java.util.regex.Pattern;
 public class Utils {
 
     public static void launchActivity(Activity activity, Class<?> clss, final int PERMISSION) {
-        if (ContextCompat.checkSelfPermission(activity, Manifest.permission.CAMERA)
-                != PackageManager.PERMISSION_GRANTED) {
-            ActivityCompat.requestPermissions(activity,
-                    new String[]{Manifest.permission.CAMERA}, PERMISSION);
-        } else {
-            Intent intent = new Intent(activity, clss);
-            activity.startActivity(intent);
+
+        switch (PERMISSION){
+            case 0 :
+                if (ContextCompat.checkSelfPermission(activity, Manifest.permission.READ_PHONE_STATE)
+                        != PackageManager.PERMISSION_GRANTED) {
+                    ActivityCompat.requestPermissions(activity,
+                            new String[]{Manifest.permission.READ_PHONE_STATE}, PERMISSION);
+                } else {
+                    Intent intent = new Intent(activity, clss);
+                    activity.startActivity(intent);
+                }
+                break;
+            case 1 :
+                if (ContextCompat.checkSelfPermission(activity, Manifest.permission.CAMERA)
+                        != PackageManager.PERMISSION_GRANTED) {
+                    ActivityCompat.requestPermissions(activity,
+                            new String[]{Manifest.permission.CAMERA}, PERMISSION);
+                } else {
+                    Intent intent = new Intent(activity, clss);
+                    intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_NEW_TASK);
+                    activity.startActivity(intent);
+                }
+
+                break;
         }
+
+    }
+
+    public static void gotoActivity(Activity activity, Class<?> clss){
+        Intent intent = new Intent(activity, clss);
+        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_NEW_TASK);
+        activity.startActivity(intent);
     }
 
     public static boolean checkURL(CharSequence input) {

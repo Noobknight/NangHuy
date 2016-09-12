@@ -1,51 +1,73 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
     android:orientation="vertical"
-    android:weightSum="1">
-
-    <ImageView
-        android:id="@+id/activity_qrcode_imgIcon"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:layout_marginTop="20dp"
-        android:layout_weight="0.15"
-        android:src="@drawable/ic_nomaps" />
-
-
+    android:clipChildren="false">
     <cn.bingoogolapple.qrcode.zbar.ZBarView
         android:id="@+id/zbarview"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginLeft="20dp"
-        android:layout_marginRight="20dp"
-        android:layout_marginTop="20dp"
-        android:layout_gravity="center"
-        android:layout_weight="0.85"
+        android:padding="@dimen/activity_horizontal_margin"
+        android:layout_gravity="center_horizontal"
         app:qrcv_animTime="1000"
         app:qrcv_borderColor="@android:color/white"
         app:qrcv_borderSize="1dp"
         app:qrcv_cornerColor="@color/colorPrimaryDark"
-        app:qrcv_cornerLength="20dp"
-        app:qrcv_cornerSize="3dp"
-        app:qrcv_isShowDefaultScanLineDrawable="true"
-        app:qrcv_maskColor="#33FFFFFF"
-        app:qrcv_rectWidth="200dp"
-        app:qrcv_scanLineColor="@color/colorPrimaryDark"
-        app:qrcv_barcodeRectHeight="140dp"
-        app:qrcv_topOffset="100dp"
-        />
-
-    <Button
-        android:id="@+id/activity_qrcode_btnBack"
+        app:qrcv_isCenterVertical="true"
+        app:qrcv_isOnlyDecodeScanBoxArea="true"
+        app:qrcv_isShowDefaultGridScanLineDrawable="false"
+        app:qrcv_isShowTipTextAsSingleLine="false"
+        app:qrcv_isTipTextBelowRect="false"
+        app:qrcv_rectWidth="640dp" />
+    <RelativeLayout
+        android:id="@+id/navgation_bar"
+        android:layout_below="@+id/zbarview"
+        android:background="@color/material_white"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="3dp"
-        android:layout_marginLeft="17dp"
-        android:layout_marginTop="10dp"
-        android:text="@string/back_action" />
+        android:layout_height="wrap_content">
+        <android.support.v7.widget.Toolbar xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/app_bar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/button_border_drawable">
 
-</LinearLayout>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="60dp"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:text="@string/app_name"
+                android:textColor="@color/material_black"
+                android:textSize="20sp" />
+
+            <Button
+                android:id="@+id/activity_qrcode_btnBack"
+                style="?android:attr/borderlessButtonStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:text="@string/back_action"
+                android:textColor="@color/material_black" />
+        </android.support.v7.widget.Toolbar>
+
+        <ImageView
+            android:id="@+id/image_qrcode"
+            android:layout_below="@+id/app_bar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:padding="10dp"
+            android:src="@drawable/nomaps" />
+    </RelativeLayout>
+    <TextView
+        android:id="@+id/secondTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/zbarview"
+        android:background="@color/material_white"
+        android:layout_marginTop="-13dp"
+        android:text=""/>
+</RelativeLayout>

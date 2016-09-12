@@ -15,7 +15,8 @@
         android:textSize="30sp"
         android:textStyle="bold" />
 
-    <LinearLayout
+    <ScrollView
+        android:id="@+id/scrollLicense"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="0.7">
@@ -24,12 +25,12 @@
             android:id="@+id/screen_lisensed_txtContent"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
+            android:padding="@dimen/activity_horizontal_margin"
             android:gravity="center_horizontal"
             android:text="@string/txt_lisence_content"
             android:textSize="20sp" />
 
-    </LinearLayout>
+    </ScrollView>
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -45,7 +46,6 @@
             android:layout_weight=".5"
             android:text="@string/btn_action_no_accept"
             android:textColor="@color/material_black" />
-
 
         <Button
             android:id="@+id/screen_lisensed_btnAccept"

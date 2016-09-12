@@ -1,0 +1,49 @@
+<resources>
+    <string name="app_name">NoMaps</string>
+    <string name="back_action">Home</string>
+    <string name="btn_start_qrcode">QRコードリーダー\n起動</string>
+    <string name="btn_footprint">フットプリント</string>
+    <string name="btn_current_position">会場を探す</string>
+    <string name="btn_info_another_utility">その他利便情報</string>
+    <string name="btn_settings_app">設定</string>
+    <string name="btn_time_table">タイムテーブル\</string>
+    <string name="btn_stamp_rally">スタンプラリー</string>
+    <string name="btn_official_website">公式サイト＞</string>
+    <string name="btn_close">閉じる</string>
+    <string name="btn_update">更新</string>
+    <string name="btn_doc_download">資料ダウンロード</string>
+
+
+    <string name="txt_allow_use_app">利用許諾</string>
+    <string name="btn_action_no_accept">同意しない</string>
+    <string name="btn_action_accept">同意する</string>
+
+    <string name="txt_title_screen_register">個人情報の登録</string>
+    <string name="edt_item_1">項目１</string>
+    <string name="edt_item_2">項目２</string>
+    <string name="edt_item_3">項目３</string>
+
+    <string name="btn_skip">X 閉じる</string>
+    <string name="btn_register">登録する</string>
+
+    <string name="dialog_msg_register">登録完了・挨拶テキスト</string>
+    
+    <string name="dialog_btn_start">はじめる</string>
+    
+    <string name="open_source_licensed">Tangerine SDK</string>
+    <string name="state_bluetooth_ON">Bluetooth状態 : ON</string>
+    <string name="state_bluetooth_OFF">Bluetooth状態 : OFF</string>
+    <string name="state_nfc_ON">NFC状態 : ON</string>
+    <string name="state_nfc_OFF">NFC状態 : OFF</string>
+
+    <string name="licensed_content">QRコードリーダー\nhttp://aaaaaaaaa\n</string>
+
+    <string name="txt_title_scrern_footprint">フットプリント</string>
+
+    <string name="txt_today_schedule">本日のタイムテーブル</string>
+    <string name="txt_tomorrow_schedule">明日のタイムテーブル</string>
+
+    <string name="txt_message_recommen_nfc">NFC機能をお薦めします</string>
+    <string name="txt_lisence_content">利用許諾テキスト</string>
+
+</resources>

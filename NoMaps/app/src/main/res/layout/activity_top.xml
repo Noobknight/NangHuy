@@ -1,91 +1,136 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical">
+    android:layout_height="wrap_content">
 
-    <ImageView
-        android:id="@+id/ic_top"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="10dp"
-        android:layout_marginRight="10dp"
-        android:layout_marginTop="5dp"
-        android:scaleType="fitXY"
-        android:src="@drawable/ic_top" />
-
-    <LinearLayout
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="horizontal"
-        android:paddingLeft="10dp"
-        android:paddingRight="10dp">
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:background="@drawable/button_border_drawable"
+            android:gravity="center"
+            android:text="@string/app_name"
+            android:textColor="@color/material_black"
+            android:textSize="20sp" />
+
+        <ImageView
+            android:id="@+id/ic_top"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="5dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/ic_top" />
 
         <LinearLayout
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_marginRight="3dp"
-            android:layout_weight="0.5"
-            android:gravity="center_vertical"
-            android:orientation="vertical"
-            android:weightSum="1">
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingLeft="10dp"
+            android:weightSum="2"
+            android:paddingRight="10dp">
 
             <Button
-                android:id="@+id/btnStartQrCode"
+                android:id="@+id/top_btn_twitter"
                 style="@style/ButtonScreenTop"
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_weight="0.3"
-                android:text="@string/btn_start_qrcode" />
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="5dp"
+                android:background="@drawable/twitter" />
 
             <Button
-                android:id="@+id/btnCurrentPosition"
+                android:id="@+id/top_btn_facebook"
                 style="@style/ButtonScreenTop"
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_weight="0.3"
-                android:text="@string/btn_current_position" />
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="5dp"
+                android:layout_weight="1"
+                android:background="@drawable/faebook"
+                android:textColor="@color/material_black" />
 
-            <Button
-                android:id="@+id/btnSettings"
-                style="@style/ButtonScreenTop"
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_weight="0.3"
-                android:text="@string/btn_settings_app" />
         </LinearLayout>
+
 
         <LinearLayout
-            android:layout_width="0dp"
+            android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_marginLeft="3dp"
-            android:layout_weight="0.5"
-            android:gravity="center_vertical"
-            android:orientation="vertical"
-            android:weightSum="1">
+            android:orientation="horizontal"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp">
 
-            <Button
-                android:id="@+id/btnMyPage"
-                style="@style/ButtonScreenTop"
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_weight="0.3"
-                android:text="@string/btn_my_page" />
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginRight="3dp"
+                android:layout_weight="0.5"
+                android:gravity="center_vertical"
+                android:orientation="vertical"
+                android:weightSum="1">
 
-            <Button
-                android:id="@+id/btnInfoUtilities"
-                style="@style/ButtonScreenTop"
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_weight="0.3"
-                android:text="@string/btn_info_another_utility" />
+                <Button
+                    android:id="@+id/btnStartQrCode"
+                    style="@style/ButtonScreenTop"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="0.3"
+                    android:text="@string/btn_start_qrcode" />
 
-            <Button
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_weight="0.3"
-                android:visibility="invisible" />
+                <Button
+                    android:id="@+id/btnCurrentPosition"
+                    style="@style/ButtonScreenTop"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="0.3"
+                    android:text="@string/btn_current_position" />
+
+                <Button
+                    android:id="@+id/btnTimeTable"
+                    style="@style/ButtonScreenTop"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="0.3"
+                    android:text="@string/btn_time_table" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="3dp"
+                android:layout_weight="0.5"
+                android:gravity="center_vertical"
+                android:orientation="vertical"
+                android:weightSum="1">
+
+                <Button
+                    android:id="@+id/btnFootprint"
+                    style="@style/ButtonScreenTop"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="0.3"
+                    android:text="@string/btn_footprint" />
+
+                <Button
+                    android:id="@+id/btnSettings"
+                    style="@style/ButtonScreenTop"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="0.3"
+                    android:text="@string/btn_settings_app" />
+
+                <Button
+                    android:id="@+id/btnStampRally"
+                    style="@style/ButtonScreenTop"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="0.3"
+                    android:text="@string/btn_stamp_rally" />
+            </LinearLayout>
         </LinearLayout>
-
     </LinearLayout>
-</LinearLayout>
+</ScrollView>

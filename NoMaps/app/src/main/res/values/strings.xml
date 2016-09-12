@@ -1,34 +1,56 @@
 <resources>
-    <string name="app_name">NoMaps</string>
-    <string name="back_action">戻る</string>
-    <string name="btn_start_qrcode">QRコードリーダー起動</string>
-    <string name="btn_my_page">マイページ</string>
-    <string name="btn_current_position">現在地を確認</string>
+    <string name="app_name">NoMapsGo!</string>
+    <string name="back_action">Home</string>
+    <string name="btn_start_qrcode">SCAN QRCODE</string>
+    <string name="btn_footprint">FOOTPRING</string>
+    <string name="btn_current_position">FIND VENUE</string>
     <string name="btn_info_another_utility">その他利便情報</string>
-    <string name="btn_settings_app">設定</string>
-    <string name="btn_close">閉じる</string>
-    <string name="btn_update">更新</string>
+    <string name="btn_settings_app">SETTING</string>
+    <string name="btn_time_table">SCHEDULE</string>
+    <string name="btn_stamp_rally">STAMP RALLY</string>
+    <string name="btn_official_website">Official Website</string>
+    <string name="btn_close">Close</string>
+    <string name="btn_update">Update</string>
+    <string name="btn_doc_download">Download</string>
 
-    <string name="txt_allow_use_app">利用許諾</string>
-    <string name="txt_lisence_content">利用許諾テキスト</string>
-    <string name="btn_action_no_accept">同意しない</string>
-    <string name="btn_action_accept">同意する</string>
+    <string name="txt_allow_use_app">License</string>
+    <string name="btn_action_no_accept">Disagree</string>
+    <string name="btn_action_accept">Agree</string>
 
-    <string name="txt_title_screen_register">個人情報の登録</string>
-    <string name="edt_item_1">項目１</string>
-    <string name="edt_item_2">項目２</string>
-    <string name="edt_item_3">項目３</string>
+    <string name="txt_title_screen_register">Register information</string>
+    <string name="edt_item_1">Item 1</string>
+    <string name="edt_item_2">Item 2</string>
+    <string name="edt_item_3">Item 3</string>
 
-    <string name="btn_skip">Skip</string>
-    <string name="btn_register">登録する</string>
+    <string name="btn_skip">Close</string>
+    <string name="btn_register">Register</string>
 
-    <string name="dialog_msg_register">登録完了・挨拶テキスト</string>
+    <string name="dialog_msg_register">Register Success</string>
     
-    <string name="dialog_btn_start">はじめる</string>
+    <string name="dialog_btn_start">Start</string>
     
-    <string name="open_source_licensed">オープンソースライセンス</string>
-    <string name="state_bluetooth">Bluetooth状態 : ON</string>
-    <string name="state_nfc">NFC状態 : OFF</string>
+    <string name="open_source_licensed">Open source license</string>
+    <string name="state_bluetooth_ON">Bluetooth : ON</string>
+    <string name="state_bluetooth_OFF">Bluetooth : OFF</string>
+    <string name="state_nfc_ON">NFC : ON</string>
+    <string name="state_nfc_OFF">NFC : OFF</string>
 
-    <string name="licensed_content">QRコードリーダー\nhttp://aaaaaaaaa\n</string>
+    <string name="licensed_content">QR code reader \ nhttp: // aaaaaaaaa \ n</string>
+
+    <string name="txt_title_scrern_footprint">Footprint</string>
+
+    <string name="txt_message_recommen_nfc">We recommend the NFC function</string>
+    <string name="txt_today_schedule">Todays schedule</string>
+    <string name="txt_tomorrow_schedule">Tomorrows schedule</string>
+
+    <string name="txt_lisence_content">License text
+    I changed it from TextView to WebView to be able of justifying the text inside. What i want to achieve is the "Accept button doesn't activate until the terms of the contract are fully read" thing. My extended class is called ScrollViewExt. If i change the tag ScrollView for ScrollViewExt it throws an
+    I changed it from TextView to WebView to be able of justifying the text inside. What i want to achieve is the "Accept button doesn't activate until the terms of the contract are fully read" thing. My extended class is called ScrollViewExt. If i change the tag ScrollView for ScrollViewExt it throws an
+    I changed it from TextView to WebView to be able of justifying the text inside. What i want to achieve is the "Accept button doesn't activate until the terms of the contract are fully read" thing. My extended class is called ScrollViewExt. If i change the tag ScrollView for ScrollViewExt it throws an
+    I changed it from TextView to WebView to be able of justifying the text inside. What i want to achieve is the "Accept button doesn't activate until the terms of the contract are fully read" thing. My extended class is called ScrollViewExt. If i change the tag ScrollView for ScrollViewExt it throws an
+    I changed it from TextView to WebView to be able of justifying the text inside. What i want to achieve is the "Accept button doesn't activate until the terms of the contract are fully read" thing. My extended class is called ScrollViewExt. If i change the tag ScrollView for ScrollViewExt it throws an
+    I changed it from TextView to WebView to be able of justifying the text inside. What i want to achieve is the "Accept button doesn't activate until the terms of the contract are fully read" thing. My extended class is called ScrollViewExt. If i change the tag ScrollView for ScrollViewExt it throws an
+    I changed it from TextView to WebView to be able of justifying the text inside. What i want to achieve is the "Accept button doesn't activate until the terms of the contract are fully read" thing. My extended class is called ScrollViewExt. If i change the tag ScrollView for ScrollViewExt it throws an
+    I changed it from TextView to WebView to be able of justifying the text inside. What i want to achieve is the "Accept button doesn't activate until the terms of the contract are fully read" thing. My extended class is called ScrollViewExt. If i change the tag ScrollView for ScrollViewExt it throws an</string>
+
 </resources>
