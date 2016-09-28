@@ -1,34 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
-    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical">
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
 
     <android.support.v7.widget.Toolbar
-        xmlns:app="http://schemas.android.com/apk/res-auto"
-        android:id="@+id/app_bar"
+        android:id="@+id/toolbar"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@drawable/button_border_drawable"
-        >
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/material_white"
+        app:popupTheme="@style/Base.ThemeOverlay.AppCompat.ActionBar">
+
         <TextView
             android:id="@+id/activity_settings_txtTitle"
             android:layout_width="wrap_content"
-            android:layout_height="60dp"
-            android:gravity="center"
-            android:textColor="@color/material_black"
-            android:textSize="20sp"
-            android:text="@string/btn_settings_app"
+            android:layout_height="match_parent"
             android:layout_gravity="center"
-            />
-        <Button
-            style="?android:attr/borderlessButtonStyle"
-            android:id="@+id/activity_setting_btnHome"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="right"
-            android:text="@string/back_action"
-            android:textColor="@color/material_black"/>
+            android:gravity="center"
+            android:text="@string/btn_settings_app"
+            android:textColor="@color/material_black"
+            android:textSize="20sp" />
+
     </android.support.v7.widget.Toolbar>
 
     <Button
@@ -58,6 +51,7 @@
         android:gravity="center"
         android:text="@string/state_nfc_ON"
         android:textColor="@color/material_black" />
+
     <Button
         android:id="@+id/activity_settings_btnRegister"
         android:layout_width="match_parent"
@@ -65,5 +59,13 @@
         android:background="@drawable/button_border_drawable"
         android:text="@string/txt_title_screen_register"
         android:textColor="@color/material_black" />
+    <!--<TextView-->
+        <!--android:id="@+id/testCookies"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="70dp"-->
+        <!--android:background="@drawable/button_border_drawable"-->
+        <!--android:gravity="center"-->
+        <!--android:text=""-->
+        <!--android:textColor="@color/material_black" />-->
 
 </LinearLayout>

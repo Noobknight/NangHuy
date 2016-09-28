@@ -1,64 +1,164 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent">
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="60dp"
-        android:background="@drawable/button_border_drawable"
-        android:gravity="center"
-        android:textColor="@color/material_black"
-        android:textSize="20sp"
-        android:text="@string/app_name"/>
-    <ImageView
-        android:id="@+id/ic_top"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="10dp"
-        android:layout_marginRight="10dp"
-        android:layout_marginTop="5dp"
-        android:scaleType="fitXY"
-        android:src="@drawable/ic_top" />
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
 
-    <LinearLayout
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="horizontal"
-        android:paddingLeft="10dp"
-        android:paddingRight="10dp">
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/material_white"
+        app:popupTheme="@style/Base.ThemeOverlay.AppCompat.ActionBar">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:adjustViewBounds="true"
+            android:scaleType="fitCenter"
+            android:padding="5dip"
+            android:src="@drawable/ic_nomaps" />
+
+    </android.support.v7.widget.Toolbar>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
 
         <LinearLayout
-            android:layout_width="0dp"
+            android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_marginRight="3dp"
-            android:layout_weight="0.5"
-            android:orientation="vertical"
-            android:weightSum="1">
-            <Button
-                android:id="@+id/end_activity_btnFootprint"
-                style="@style/ButtonScreenTop"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/ic_top"
                 android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_weight="0.4"
-                android:text="@string/btn_footprint" />
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="5dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/ic_top" />
 
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_marginLeft="3dp"
-            android:layout_weight="0.5"
-            android:orientation="vertical"
-            android:weightSum="1">
-
-            <Button
-                android:id="@+id/btnDocDownload"
-                style="@style/ButtonScreenTop"
+            <TextView
+                android:id="@+id/txt_thank"
                 android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_weight="0.4"
-                android:text="@string/btn_doc_download" />
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:padding="10dp"
+                android:text="@string/txt_thank"
+                android:textSize="20sp" />
+
+            <LinearLayout
+                android:id="@+id/info_lay"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="5dp"
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:text="@string/title_information"
+                    android:textColor="@color/material_red_500"
+                    android:textSize="16sp" />
+
+                <LinearLayout
+                    android:id="@+id/info_list_lay"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"></LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="3dp"
+                    android:layout_weight="0.5"
+                    android:orientation="vertical"
+                    android:weightSum="1">
+
+                    <Button
+                        android:id="@+id/btnDocDownload"
+                        style="@style/ButtonScreenTop"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="0.4"
+                        android:text="@string/btn_doc_download" />
+
+                    <Button
+                        android:id="@+id/end_activity_btnFootprint"
+                        style="@style/ButtonScreenTop"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="0.4"
+                        android:text="@string/btn_footprint" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="3dp"
+                    android:layout_weight="0.5"
+                    android:orientation="vertical"
+                    android:weightSum="1">
+
+                    <Button
+                        android:id="@+id/end_activity_btn_artist_content"
+                        style="@style/ButtonScreenTop"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="0.4"
+                        android:text="@string/btn_artist_content" />
+
+                    <Button
+                        android:id="@+id/end_activity_btn_official_site"
+                        style="@style/ButtonScreenTop"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="0.4"
+                        android:text="@string/btn_official_website" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp">
+
+                <Button
+                    android:id="@+id/end_btn_twitter"
+                    style="@style/ButtonScreenTop"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="3dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/twitter" />
+
+                <Button
+                    android:id="@+id/end_btn_facebook"
+                    style="@style/ButtonScreenTop"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="3dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/faebook"
+                    android:textColor="@color/material_black" />
+            </LinearLayout>
         </LinearLayout>
-    </LinearLayout>
+    </ScrollView>
 </LinearLayout>

@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/NoMaps.iml" filepath="$PROJECT_DIR$/NoMaps.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ColorDialog/ColorDialog.iml" filepath="$PROJECT_DIR$/ColorDialog/ColorDialog.iml" />
+      <module fileurl="file://$PROJECT_DIR$/NoMapsGo2.iml" filepath="$PROJECT_DIR$/NoMapsGo2.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
     </modules>
   </component>

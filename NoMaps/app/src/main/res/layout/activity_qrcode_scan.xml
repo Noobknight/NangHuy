@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-    android:orientation="vertical"
-    android:clipChildren="false">
+    android:clipChildren="false"
+    android:orientation="vertical">
+
     <cn.bingoogolapple.qrcode.zbar.ZBarView
         android:id="@+id/zbarview"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:padding="@dimen/activity_horizontal_margin"
         android:layout_gravity="center_horizontal"
+        android:padding="@dimen/activity_horizontal_margin"
         app:qrcv_animTime="1000"
         app:qrcv_borderColor="@android:color/white"
         app:qrcv_borderSize="1dp"
@@ -21,29 +21,32 @@
         app:qrcv_isShowDefaultGridScanLineDrawable="false"
         app:qrcv_isShowTipTextAsSingleLine="false"
         app:qrcv_isTipTextBelowRect="false"
-        app:qrcv_rectWidth="640dp" />
+        app:qrcv_rectWidth="1608dp" />
+
     <RelativeLayout
         android:id="@+id/navgation_bar"
-        android:layout_below="@+id/zbarview"
-        android:background="@color/material_white"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/zbarview">
+
         <android.support.v7.widget.Toolbar xmlns:app="http://schemas.android.com/apk/res-auto"
             android:id="@+id/app_bar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@drawable/button_border_drawable">
+            android:background="@drawable/qr_code_bar">
 
             <TextView
+                android:background="@color/material_white"
                 android:layout_width="wrap_content"
-                android:layout_height="60dp"
+                android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:gravity="center"
-                android:text="@string/app_name"
+                android:text="@string/title_scan_qr"
                 android:textColor="@color/material_black"
                 android:textSize="20sp" />
 
             <Button
+                android:background="@color/material_white"
                 android:id="@+id/activity_qrcode_btnBack"
                 style="?android:attr/borderlessButtonStyle"
                 android:layout_width="wrap_content"
@@ -54,20 +57,29 @@
         </android.support.v7.widget.Toolbar>
 
         <ImageView
+            android:background="@color/material_white"
             android:id="@+id/image_qrcode"
-            android:layout_below="@+id/app_bar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_below="@+id/app_bar"
             android:layout_gravity="center"
             android:padding="10dp"
-            android:src="@drawable/nomaps" />
+            android:src="@drawable/image_title_qr_code" />
+        <ImageView
+            android:id="@+id/scan_line"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/image_qrcode"
+            android:layout_centerVertical="true"
+            android:src="@drawable/border_scan" />
     </RelativeLayout>
+
     <TextView
         android:id="@+id/secondTextView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/zbarview"
-        android:background="@color/material_white"
         android:layout_marginTop="-13dp"
-        android:text=""/>
+        android:background="@color/material_white"
+        android:text="" />
 </RelativeLayout>

@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#e6e6e6">
+
+    <LinearLayout
+        android:id="@+id/rowInfo"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+
+        <FrameLayout
+            android:layout_width="0dip"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:padding="15dip">
+
+            <TextView
+                android:id="@+id/info_tv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:maxLines="2"
+                android:text="dfadfadfasdfadsfadsfadsfaああああああああdsfadsfadsfaddfadfadfasdfadsfadsfadsfadsfadsfadsfad"
+                android:textColor="@color/material_textBlack_secondaryText"
+                android:textSize="14sp"/>
+
+            <TextView
+                android:id="@+id/time_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="10/16 15:00"
+                android:layout_gravity="right|bottom"
+                android:background="#e6e6e6"
+                android:textColor="@android:color/holo_blue_light"
+                android:textSize="14sp"
+                android:paddingLeft="10dip"/>
+            </FrameLayout>
+
+        <ImageView
+            android:id="@+id/arrow_bottom_iv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_expanded_right"
+            android:adjustViewBounds="true"
+            android:layout_gravity="center_vertical"
+            android:scaleType="fitCenter"
+            android:paddingTop="15dip"
+            android:paddingRight="15dip"
+            android:paddingBottom="15dip"/>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/top_info_bt"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/selector_top_buttons" />
+</FrameLayout>

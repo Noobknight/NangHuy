@@ -1,136 +1,355 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content">
+    android:layout_height="match_parent"
+    android:orientation="vertical">
 
-    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical">
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="60dp"
-            android:background="@drawable/button_border_drawable"
-            android:gravity="center"
-            android:text="@string/app_name"
-            android:textColor="@color/material_black"
-            android:textSize="20sp" />
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/material_white"
+        app:popupTheme="@style/Base.ThemeOverlay.AppCompat.ActionBar">
 
         <ImageView
-            android:id="@+id/ic_top"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="10dp"
-            android:layout_marginRight="10dp"
-            android:layout_marginTop="5dp"
-            android:scaleType="fitXY"
-            android:src="@drawable/ic_top" />
+            android:layout_gravity="center"
+            android:adjustViewBounds="true"
+            android:foregroundGravity="center"
+            android:gravity="center"
+            android:scaleType="center"
+            android:src="@drawable/header_logo3" />
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:paddingLeft="10dp"
-            android:weightSum="2"
-            android:paddingRight="10dp">
+    </android.support.v7.widget.Toolbar>
 
-            <Button
-                android:id="@+id/top_btn_twitter"
-                style="@style/ButtonScreenTop"
-                android:layout_weight="1"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_marginRight="5dp"
-                android:background="@drawable/twitter" />
-
-            <Button
-                android:id="@+id/top_btn_facebook"
-                style="@style/ButtonScreenTop"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_marginRight="5dp"
-                android:layout_weight="1"
-                android:background="@drawable/faebook"
-                android:textColor="@color/material_black" />
-
-        </LinearLayout>
-
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:orientation="horizontal"
-            android:paddingLeft="10dp"
-            android:paddingRight="10dp">
+            android:orientation="vertical">
 
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/ic_top"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:adjustViewBounds="true"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/top_main" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="0dip"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:orientation="horizontal" />
+
+                    <LinearLayout
+                        android:layout_width="0dip"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:weightSum="5">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="0dip"
+                            android:layout_weight="4"
+                            android:orientation="horizontal" />
+
+                        <FrameLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="0dip"
+                            android:layout_weight="1">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:gravity="center_vertical|right"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:gravity="center_vertical"
+                                    android:text="@string/btn_official_website"
+                                    android:textColor="@color/red"
+                                    android:textSize="14sp"
+                                    android:textStyle="bold" />
+
+                                <ImageView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:adjustViewBounds="true"
+                                    android:padding="5dip"
+                                    android:scaleType="fitCenter"
+                                    android:src="@drawable/top_official_icon" />
+                            </LinearLayout>
+
+                            <Button
+                                android:id="@+id/btnOfficialWebsite"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:background="@drawable/selector_top_buttons"
+                                android:gravity="center_horizontal|bottom" />
+                        </FrameLayout>
+
+                    </LinearLayout>
+                </LinearLayout>
+            </FrameLayout>
+            <!--<TextView-->
+            <!--android:id="@+id/welcom_top"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="match_parent"-->
+            <!--android:gravity="center"-->
+            <!--android:text="@string/txtWelCom"-->
+            <!--android:textColor="@color/red"-->
+            <!--android:textSize="14sp" />-->
             <LinearLayout
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_marginRight="3dp"
-                android:layout_weight="0.5"
-                android:gravity="center_vertical"
-                android:orientation="vertical"
-                android:weightSum="1">
+                android:id="@+id/welcom_lay"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
 
-                <Button
-                    android:id="@+id/btnStartQrCode"
-                    style="@style/ButtonScreenTop"
-                    android:layout_width="match_parent"
-                    android:layout_height="0dp"
-                    android:layout_weight="0.3"
-                    android:text="@string/btn_start_qrcode" />
-
-                <Button
-                    android:id="@+id/btnCurrentPosition"
-                    style="@style/ButtonScreenTop"
-                    android:layout_width="match_parent"
-                    android:layout_height="0dp"
-                    android:layout_weight="0.3"
-                    android:text="@string/btn_current_position" />
-
-                <Button
-                    android:id="@+id/btnTimeTable"
-                    style="@style/ButtonScreenTop"
-                    android:layout_width="match_parent"
-                    android:layout_height="0dp"
-                    android:layout_weight="0.3"
-                    android:text="@string/btn_time_table" />
+                <include
+                    android:id="@+id/include_views_1"
+                    layout="@layout/info_row" />
             </LinearLayout>
 
             <LinearLayout
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_marginLeft="3dp"
-                android:layout_weight="0.5"
-                android:gravity="center_vertical"
+                android:id="@+id/info_lay"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
                 android:orientation="vertical"
-                android:weightSum="1">
+                android:visibility="gone">
 
-                <Button
-                    android:id="@+id/btnFootprint"
-                    style="@style/ButtonScreenTop"
+                <LinearLayout
+                    android:id="@+id/info_list_lay"
                     android:layout_width="match_parent"
-                    android:layout_height="0dp"
-                    android:layout_weight="0.3"
-                    android:text="@string/btn_footprint" />
-
-                <Button
-                    android:id="@+id/btnSettings"
-                    style="@style/ButtonScreenTop"
-                    android:layout_width="match_parent"
-                    android:layout_height="0dp"
-                    android:layout_weight="0.3"
-                    android:text="@string/btn_settings_app" />
-
-                <Button
-                    android:id="@+id/btnStampRally"
-                    style="@style/ButtonScreenTop"
-                    android:layout_width="match_parent"
-                    android:layout_height="0dp"
-                    android:layout_weight="0.3"
-                    android:text="@string/btn_stamp_rally" />
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical" />
             </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <jp.co.crypton.spinach.activities.SquareRelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:adjustViewBounds="true"
+                            android:scaleType="fitXY"
+                            android:src="@drawable/bt_map" />
+
+                        <Button
+                            android:id="@+id/btnCurrentPosition"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/selector_top_buttons"
+                            android:gravity="center_horizontal|bottom"
+                            android:paddingBottom="20dip"
+                            android:text="@string/btn_current_position"
+                            android:textColor="@color/material_white"
+                            android:textSize="12sp" />
+
+                    </FrameLayout>
+                </jp.co.crypton.spinach.activities.SquareRelativeLayout>
+
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:adjustViewBounds="true"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/bt_schedule" />
+
+                    <Button
+                        android:id="@+id/btnTimeTable"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/selector_top_buttons"
+                        android:gravity="center_horizontal|bottom"
+                        android:paddingBottom="20dip"
+                        android:text="@string/btn_time_table"
+                        android:textColor="@color/material_textBlack_secondaryText"
+                        android:textSize="12sp" />
+
+                </FrameLayout>
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:adjustViewBounds="true"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/bt_footprint" />
+
+                    <Button
+                        android:id="@+id/btnFootprint"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/selector_top_buttons"
+                        android:gravity="center_horizontal|bottom"
+                        android:paddingBottom="20dip"
+                        android:text="@string/btn_footprint"
+                        android:textAllCaps="false"
+                        android:textColor="@color/material_white"
+                        android:textSize="12sp" />
+
+                </FrameLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <jp.co.crypton.spinach.activities.SquareRelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:adjustViewBounds="true"
+                            android:scaleType="fitXY"
+                            android:src="@drawable/bt_setting" />
+
+                        <Button
+                            android:id="@+id/btnSettings"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/selector_top_buttons"
+                            android:gravity="center_horizontal|bottom"
+                            android:paddingBottom="20dip"
+                            android:text="@string/btn_settings_app"
+                            android:textColor="@color/material_textBlack_secondaryText"
+                            android:textSize="12sp" />
+                    </FrameLayout>
+                </jp.co.crypton.spinach.activities.SquareRelativeLayout>
+
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:adjustViewBounds="true"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/btn_qr_code" />
+
+                    <Button
+                        android:id="@+id/btnStartQrCode"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/selector_top_buttons"
+                        android:gravity="center_horizontal|bottom"
+                        android:paddingBottom="20dip"
+                        android:text="@string/btn_start_qrcode"
+                        android:textColor="@color/material_textBlack_secondaryText"
+                        android:textSize="12sp" />
+
+                </FrameLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dip"
+                        android:layout_weight="1">
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:adjustViewBounds="true"
+                            android:scaleType="fitXY"
+                            android:src="@drawable/bt_fb" />
+
+                        <Button
+                            android:id="@+id/top_btn_facebook"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/selector_top_buttons" />
+
+                    </FrameLayout>
+
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dip"
+                        android:layout_weight="1">
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:adjustViewBounds="true"
+                            android:scaleType="fitXY"
+                            android:src="@drawable/bt_tw" />
+
+                        <Button
+                            android:id="@+id/top_btn_twitter"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/selector_top_buttons" />
+
+                    </FrameLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:adjustViewBounds="true"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/top_footer" />
+            </LinearLayout>
+
         </LinearLayout>
-    </LinearLayout>
-</ScrollView>
+    </ScrollView>
+</LinearLayout>

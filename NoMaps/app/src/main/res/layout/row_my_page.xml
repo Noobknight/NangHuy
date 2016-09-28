@@ -1,19 +1,33 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical">
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/RelativeLayout01"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:padding="10dp">
 
+    <ImageView
+        android:id="@+id/icon_row"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_gravity="center_vertical"
+        android:scaleType="fitCenter" />
 
     <TextView
-        android:id="@+id/activity_txtContentRow"
-        android:layout_width="match_parent"
-        android:layout_height="70dp"
-        android:background="@drawable/button_border_drawable"
-        android:gravity="center_vertical"
-        android:paddingLeft="20dp"
+        android:id="@+id/title_content_row"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_margin="@dimen/activity_horizontal_margin"
+        android:layout_toRightOf="@+id/icon_row"
         android:text="@string/edt_item_1"
-        android:textColor="@color/material_black"
-        android:textSize="16sp" />
+        android:textSize="14dp" />
 
-</LinearLayout>
+    <TextView
+        android:id="@+id/rowdatetime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:text="@string/edt_item_1"
+        android:textSize="10dp" />
+
+</RelativeLayout>

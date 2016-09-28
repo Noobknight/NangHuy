@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<jp.co.crypton.spinach.activities.SquareRelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/elementRootView"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        >
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/RelativeLayout01"
+            android:background="#D5D5D5">
+            <ImageView
+                android:id="@+id/row_download_image"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minHeight="80dp"
+                android:layout_gravity="center"
+                android:adjustViewBounds="true"
+                android:scaleType="fitCenter"
+                />
+        </FrameLayout>
+
+
+        <TextView
+            android:id="@+id/row_download_txt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="50dip"
+            android:padding="8dp"
+            android:textColor="#222"
+            android:textSize="16dp"
+            android:text="@string/edt_item_1"
+            />
+
+    </LinearLayout>
+</jp.co.crypton.spinach.activities.SquareRelativeLayout>

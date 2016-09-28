@@ -283,7 +283,7 @@
     <color name="material_blueGrey_900">#263238</color>
 
     <!-- Black -->
-    <color name="material_black">#000000</color>
+    <color name="material_black">#89000000</color>
 
     <!-- White -->
     <color name="material_white">#ffffff</color>

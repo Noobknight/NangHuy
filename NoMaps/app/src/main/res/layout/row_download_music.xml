@@ -1,0 +1,42 @@
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/card_view"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingLeft="5dp"
+    card_view:cardElevation="3dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <FrameLayout
+            android:id="@+id/RelativeLayout01"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#D5D5D5">
+
+            <ImageView
+                android:id="@+id/row_download_music_image"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:layout_gravity="center"
+                android:adjustViewBounds="true"
+                android:scaleType="centerInside"
+                />
+        </FrameLayout>
+
+
+        <TextView
+            android:id="@+id/row_download_music_txt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/RelativeLayout01"
+            android:minHeight="50dip"
+            android:padding="8dp"
+            android:text="@string/edt_item_1"
+            android:textColor="#222"
+            android:textSize="16dp" />
+
+    </RelativeLayout>
+</android.support.v7.widget.CardView>
