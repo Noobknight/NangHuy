@@ -101,7 +101,7 @@ public class PinchImageActivity extends BaseActivity{
     }
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        getMenuInflater().inflate(R.menu.common, menu);
+        getMenuInflater().inflate(R.menu.close, menu);
         return true;
     }
 

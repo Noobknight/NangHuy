@@ -60,12 +60,12 @@
         android:text="@string/txt_title_screen_register"
         android:textColor="@color/material_black" />
     <!--<TextView-->
-        <!--android:id="@+id/testCookies"-->
-        <!--android:layout_width="match_parent"-->
-        <!--android:layout_height="70dp"-->
-        <!--android:background="@drawable/button_border_drawable"-->
-        <!--android:gravity="center"-->
-        <!--android:text=""-->
-        <!--android:textColor="@color/material_black" />-->
+    <!--android:id="@+id/testCookies"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="70dp"-->
+    <!--android:background="@drawable/button_border_drawable"-->
+    <!--android:gravity="center"-->
+    <!--android:text=""-->
+    <!--android:textColor="@color/material_black" />-->
 
 </LinearLayout>

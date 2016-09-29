@@ -68,7 +68,7 @@ public class FootPrintActivity extends BaseActivity {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 String url = result.get(position).getUrl();
-                if (url.startsWith(Constants.NOMAPS_URL_PREFIX)) {
+                if (url.startsWith(Constants.SMARTPLATE_PREFIX)) {
                     showWebview(url, Constants.WEBVIEW_TYPE_SP);
                 } else {
                     Intent i = new Intent(Intent.ACTION_VIEW);

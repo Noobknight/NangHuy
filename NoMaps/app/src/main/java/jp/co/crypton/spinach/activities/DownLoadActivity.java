@@ -198,7 +198,7 @@ public class DownLoadActivity extends BaseActivity {
         return list;
     }
 
-//    private void writeListToFile(String json) {
+    //    private void writeListToFile(String json) {
 //        File myfile = getFileStreamPath(Constants.FILE_NAME_JSON_DOWNLOAD);
 //        try {
 //            if (myfile.exists() || myfile.createNewFile()) {
@@ -214,12 +214,11 @@ public class DownLoadActivity extends BaseActivity {
         Intent i = new Intent(Intent.ACTION_SEND);
         i.setType("message/rfc822");
         String body = "";
-        for(ListData item : result)
-        {
-            body += item.getUserName()+"\n"+item.getUrl()+"\n";
+        for(ListData item : result) {
+            body += item.getUserName()+"\n"+item.getUrl()+"\n\n";
         }
-        i.putExtra(Intent.EXTRA_EMAIL  , new String[]{"recipient@example.com"});
-        i.putExtra(Intent.EXTRA_SUBJECT, "NoMaps資料ダウンロード");
+        i.putExtra(Intent.EXTRA_EMAIL  , new String[]{""});
+        i.putExtra(Intent.EXTRA_SUBJECT, getString(R.string.mail_subject));
         i.putExtra(Intent.EXTRA_TEXT, body);
         try {
             startActivity(Intent.createChooser(i, "Send mail..."));
