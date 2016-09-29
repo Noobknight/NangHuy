@@ -5,11 +5,11 @@ package jp.co.crypton.spinach.constants;
  */
 public class Constants {
     public static final String API_DOMAIN = "http://smartplate.kokope.li/access_history.php";
-    public static final String NOMAPS_URL_PREFIX = "http://plate.id/";
+    public static final String NOMAPS_URL_PREFIX = "http://plate.id/NM";
     public static final String SMARTPLATE_PREFIX = "http://plate.id/";
     public static final String SMARTPLATE_PREFIX_NEXTPAGE = "http://plate.id/tiles/tiles.php";
     public static final String QR_CODE_URL_PREFIX = "http://plate.id/NM";
-//    public static final String SCHEDULE_IMAGE_DIR = "http://mt.aquabit.net/nomaps/images/";
+    //    public static final String SCHEDULE_IMAGE_DIR = "http://mt.aquabit.net/nomaps/images/";
     public static final String SCHEDULE_IMAGE_DIR = "https://s3-ap-northeast-1.amazonaws.com/aquabit/nomaps/schedule/";
     public static final String URL_LICENSE = "https://s3-ap-northeast-1.amazonaws.com/aquabit/nomaps/agreement.txt";
     public static final String URL_BOOT = "https://s3-ap-northeast-1.amazonaws.com/aquabit/nomaps/boot.json";
